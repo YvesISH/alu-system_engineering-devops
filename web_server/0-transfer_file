@@ -1,0 +1,10 @@
+#/usr/bin/env bash
+
+if ["$#" -lt 4 ];
+then
+    echo "Usage: $0 PATH_TO_FILE IP USERNAME PATH_TO_SSH_KEY"
+    exit 1
+fi
+
+host="$3@$2:~/"
+scp -o StrictHostKeyChecking=no -i "$4" "$1" "$host"
