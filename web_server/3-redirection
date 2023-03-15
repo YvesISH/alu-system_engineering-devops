@@ -4,6 +4,8 @@
 sudo apt update -y
 sudo apt install nginx -y
 
+sudo mkdir /etc/nginx/html
+sudo touch /etc/nginx/html/index.html
 # store configuration content
 new_config=\
 "server {
