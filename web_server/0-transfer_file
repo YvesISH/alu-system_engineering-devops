@@ -1,11 +1,9 @@
 #!/usr/bin/env bash
 #Transfer a File to your server
 
-if ["$#" -lt 4 ];
+if [ $# -lt 4 ]
 then
     echo "Usage: $0 PATH_TO_FILE IP USERNAME PATH_TO_SSH_KEY"
-    exit 1
+else
+    scp -o StrictHostKeyChecking=no -i "$4" "$1" "$3@$2":~
 fi
-
-host="$3@$2:~/"
-scp -o StrictHostKeyChecking=no -i "$4" "$1" "$host"
