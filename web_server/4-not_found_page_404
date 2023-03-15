@@ -4,11 +4,11 @@
 sudo apt update -y
 sudo apt install nginx -y
 
-sudo mkdir /etc/nginx/html
-sudo touch /etc/nginx/html/index.html
-sudo touch /etc/nginx/html/404.html
-sudo echo "Holberton School" > /etc/nginx/html/index.html
-sudo echo "Ceci n'est pas une page" > /etc/nginx/html/404.html
+mkdir /etc/nginx/html
+touch /etc/nginx/html/index.html
+touch /etc/nginx/html/404.html
+echo "Holberton School" > /etc/nginx/html/index.html
+echo "Ceci n'est pas une page" > /etc/nginx/html/404.html
 
 # store configuration content
 new_config=\
@@ -28,7 +28,7 @@ new_config=\
 	location /404 {
 	    root etc/nginx/html;
 	    internal;
-}
+        }
 }
 "
 echo "$new_config" > /etc/nginx/sites-available/default
