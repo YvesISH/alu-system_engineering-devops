@@ -7,9 +7,9 @@ sudo apt-get update && upgrade
 sudo apt-get install nginx -y
 
 #Create a directory called html inside your nginx server
-sudo mkdir /etc/nginx/html
+sudo mkdir /var/www/html
 #Create a file inside that directory called index.html
-sudo touch html/index.html
+sudo touch /var/www/html/index.html
 #Display your message then
-sudo echo "Holberton School" > /etc/nginx/html/index.html
+sudo echo "Holberton School" > /var/www/html/index.html
 sudo service nginx restart
