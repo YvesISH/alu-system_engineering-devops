@@ -2,7 +2,6 @@
 #Installing Nginx and configuring it
 sudo apt update -y
 sudo apt install nginx -y
-host_name = "$HOSTNAME"
 new_config=\
 "server {
 	listen 80 default_server;
@@ -10,7 +9,7 @@ new_config=\
 		root /var/www/html;
 	index index.html index.html index.nginx-debian.html;
 	server_name _;
-	add_header X-serves-By $host_name;
+	add_header X-serves-By $HOSTNAME;
 }
 "
 sudo chown -R "$USER":"$USER" /etc/nginx/sites-available/default
