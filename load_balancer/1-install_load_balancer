@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# bash script that installs HAProxy & makes configurations to meet the following requirements:
+#Bash script that installs HAProxy & makes configurations
 
 apt-get -y install software-properties-common
 add-apt-repository ppa:vbernat/haproxy-1.8
