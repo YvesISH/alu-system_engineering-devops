@@ -3,5 +3,5 @@
 sudo chmod -R 755 /etc/nginx/
 sudo pkill -9 apache2
 sudo sed -i 's/8080/8081/g' /etc/apache2/ports.conf
-sudo nginx -c "sed -i 's/80/8080/g' /etc/nginx/sites-enabled/default"
-sudo nginx service nginx restart
+su nginx -c "sed -i 's/80/8080/g' /etc/nginx/sites-enabled/default"
+su nginx service nginx restart
